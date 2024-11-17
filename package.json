@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@shopify/react-native-skia": "^1.3.2",
-    "@venetanji/diffusers.js": "https://github.com/venetanji/diffusers-react-native.js.git",
+    "transformers.js": "file:./transformers.js",
+    "diffusers.js": "file:./diffusers-react-native.js",
     "onnxruntime-react-native": "^1.18.0",
     "react": "18.2.0",
     "react-native": "0.74.1",
