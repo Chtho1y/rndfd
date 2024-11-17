@@ -16,10 +16,6 @@
     "docs-preview": "doc-builder preview transformers.js ./docs/source/ --not_python_module",
     "docs-build": "doc-builder build transformers.js ./docs/source/ --not_python_module --build_dir ./docs/build/ --repo_owner xenova"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xenova/transformers.js.git"
-  },
   "keywords": [
     "transformers",
     "transformers.js",
