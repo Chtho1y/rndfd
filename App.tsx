@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -12,7 +12,7 @@ import {
   Alert,
   Image
 } from 'react-native';
-import { LCMStableDiffusionPipeline } from '@venetanji/diffusers.js'
+import { LCMStableDiffusionPipeline } from 'diffusers.js'
 import { Skia, AlphaType, ColorType } from "@shopify/react-native-skia";
 
 
@@ -30,7 +30,7 @@ const App = () => {
     }
   };
 
-  const [imageUri, setImageUri] = useState({uri: 'https://reactnative.dev/img/tiny_logo.png'});
+  const [imageUri, setImageUri] = useState({ uri: 'https://reactnative.dev/img/tiny_logo.png' });
 
 
   const generate = async () => {
@@ -40,10 +40,10 @@ const App = () => {
     }
     //await createSession()
     console.log("Generating image...")
-    const square = 384  
-    const {width, height} = {width: square, height: square}
+    const square = 384
+    const { width, height } = { width: square, height: square }
 
-    const progressCallback = (payload:any) => {
+    const progressCallback = (payload: any) => {
       console.log(payload)
     }
 
@@ -77,7 +77,7 @@ const App = () => {
       return;
     }
 
-    setImageUri({uri: `data:image/png;base64,${img?.encodeToBase64()}`})
+    setImageUri({ uri: `data:image/png;base64,${img?.encodeToBase64()}` })
     console.log('Image encoded and sent to Image component')
   }
 
@@ -95,7 +95,7 @@ const App = () => {
 
     return (
       <Image
-        style={{width: 400, height: 400}}
+        style={{ width: 400, height: 400 }}
         source={imageUri}
       />
     );
@@ -110,7 +110,7 @@ const App = () => {
         onPress={() => {
           generate();
         }}
-        ></Button>
+      ></Button>
     </View>
   );
 };
